@@ -1,4 +1,62 @@
 \frame {
+  \frametitle{Propositions as Types}
+
+  \begin{tabular}{rcl}
+  Proposition          & \(\leftrightarrow\) & Type \\
+  Proof                & \(\leftrightarrow\) & Term \\
+  Proof simplification & \(\leftrightarrow\) & Computation
+  \end{tabular}
+}
+
+\frame {
+  \frametitle{Propositions as Types}
+
+  \begin{tabular}{rcl}
+    \(A\) & \(\leftrightarrow\) & \(A\) \\
+    \(A \land B\) & \(\leftrightarrow\) & \(A \times B\) \\
+    \(A \supset B\) & \(\leftrightarrow\) & \(A \to B\) \\
+    \(\forall x B(x)\) & \(\leftrightarrow\) & \(\Pi (x : A) B\) \\
+    \(x = y\) & \(\leftrightarrow\) & ???
+  \end{tabular}
+}
+
+\frame {
+  \frametitle{\(=\)}
+
+  Logic:
+  \begin{itemize}
+  \item Reflexivity
+    \AxiomC{\(x = x\)}
+    \DisplayProof
+  \item Congruence
+    \AxiomC{\(x = y\)}
+    \UnaryInfC{\(f(x) = f(y)\)}
+    \DisplayProof
+  \item Substiutivity
+    \AxiomC{\(x = y\)}
+    \AxiomC{\(A_x\)}
+    \BinaryInfC{\(A_y\)}
+    \DisplayProof
+  \end{itemize}
+
+  Type theory:
+  \begin{itemize}
+  \item
+    \AxiomC{\(\mathcal{I} x x\)}
+    \DisplayProof
+  \item
+    \AxiomC{\(\mathcal{I} x y\)}
+    \UnaryInfC{\(\mathcal{I} (f x) (f y)\)}
+    \DisplayProof
+  \item
+    \AxiomC{\(\mathcal{I} x y\)}
+    \AxiomC{\(A_x\)}
+    \BinaryInfC{\(A_y\)}
+    \DisplayProof
+  \end{itemize}
+}
+
+\frame {
    \frametitle{TT}
 }
 
