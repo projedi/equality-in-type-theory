@@ -57,11 +57,67 @@
 }
 
 \frame {
-   \frametitle{TT}
+  \frametitle{Intentional Type Theory}
+  \framesubtitle{aka Martin-L\"of theory of types}
+  Definitional \(f \equiv g\).
+
+  \begin{itemize}
+    \item Intentional
+    \item Up to \textalpha
+    \item Substiutive
+  \end{itemize}
+  Checking that in
+  \AxiomC{\(A\)}
+  \AxiomC{\(B\)}
+  \BinaryInfC{\(A \& B\)}
+  \DisplayProof
+  \(A\), \(B\) on top are the same (i.e.\ definitionally equal) to the ones on the bottom.
 }
 
 \frame {
-  \frametitle{ITT}
+  \frametitle{Intentional Type Theory}
+  \framesubtitle{aka Martin-L\"of theory of types}
+  Judgemental \(A = B,\quad a = b \in A\)
+
+  \begin{itemize}
+    \item Holds by definition for canonical elements
+    \item Up to \textbeta
+    \item Substiutive
+    \item
+      \AxiomC{\(a \in A\)}
+      \AxiomC{\(A = B\)}
+      \BinaryInfC{\(a \in B\)}
+      \DisplayProof
+    \item
+      \AxiomC{\(a = b \in A\)}
+      \AxiomC{\(A = B\)}
+      \BinaryInfC{\(a = b \in B\)}
+      \DisplayProof
+  \end{itemize}
+}
+
+\frame {
+  \frametitle{Intentional Type Theory}
+  \framesubtitle{aka Martin-L\"of theory of types}
+  Propositional \(I(a, b, A)\)
+
+  \begin{itemize}
+    \item A type
+    \item Canonical element \(r(a) : I(a, a, A)\)
+    \item Eliminator \(J : \).
+    \item
+      \AxiomC{\(a = b \in A\)}
+      \UnaryInfC{\(r(a) : I (a, b, A)\)}
+      \DisplayProof
+  \end{itemize}
+}
+
+\frame {
+  \frametitle{Extensional Type Theory}
+
+  \AxiomC{\(x \in I(a, b, A)\)}
+  \UnaryInfC{\(a = b \in A\)}
+  \DisplayProof
 }
 
 \frame {
