@@ -1,4 +1,24 @@
 \frame {
+  \frametitle{Propositions as Types}
+
+  \begin{tabular}{rcl}
+  Proposition & \(\leftrightarrow\) & Type\\
+  Proof & \(\leftrightarrow\) & Program\\
+  Proof simplification & \(\leftrightarrow\) & Computation
+  \end{tabular}
+
+  \begin{itemize}
+    \item Syntactic \(=\).
+      \AxiomC{\(\textcolor{red}{A}\)}
+      \AxiomC{\(B\)}
+      \BinaryInfC{\(\textcolor{blue}{A} \land B\)}
+      \DisplayProof
+    \item \(=\) on propositions.
+    \item \(=\) as proposition.
+  \end{itemize}
+}
+
+\frame {
   \frametitle{Intentional Type Theory}
   \framesubtitle{Martin-L\"of 1975}
   \begin{description}
@@ -34,12 +54,6 @@
   \begin{description}
   \item[Definitional equality]\leavevmode\\
     Definition, Equivalence, Substituiting equals for equals, \textalpha.
-    Checking that in
-    \AxiomC{\(A\)}
-    \AxiomC{\(B\)}
-    \BinaryInfC{\(A \& B\)}
-    \DisplayProof
-    \(A\), \(B\) on top are the same (i.e.\ definitionally equal) to the ones on the bottom.
   \item[Judgemental equality \(A = B\), \(a = b : A\)]\leavevmode\\
     Defined for every type, \textbeta\texteta,
     \AxiomC{\([x : A]\)}
@@ -98,6 +112,8 @@
 
   ITT + impredicative Prop.
   Equality is Leibniz: \(\forall P : A \to Prop.\ P(a) \implies P(b)\).
+
+  % TODO: Logical frameworks.
 }
 
 \frame {
