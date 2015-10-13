@@ -36,15 +36,18 @@
       r(a) : I(A, a, a)
     \]
     \begin{prooftree}
-    \AxiomC{\(x : A\)}
-    \AxiomC{\(y : A\)}
-    \AxiomC{\(z : I(A, x, y)\)}
-    \TrinaryInfC{\(C[x, y, z]\)}
     \AxiomC{\(c[x] : C[x, x, r(x)]\)}
-    \BinaryInfC{\(f(x, x, r(x)) \defeq c[x]\)}
+    \UnaryInfC{\(f(x, x, r(x)) \defeq c[x]\)}
     \end{prooftree}
+    \begin{prooftree}
+    \AxiomC{\(\)}
+    \end{prooftree}
+    \begin{align*}
+    J &: ((x : A) \to C(x, x, r(x)))\\
+      &\to (x y : A) (p : I(A, x, y))\\
+      &\to C(x, y, p)
+    \end{align*}
   \end{description}
-  % TODO: Also mention J as a modern alternative.
 }
 
 \frame {
