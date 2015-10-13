@@ -25,6 +25,7 @@
   \item[Definitional equality \(\defeq\)]\leavevmode\\
     Definition, \textalpha\textbeta-equivalence,
     \AxiomC{\(a \defeq b\)}
+    \LeftLabel{SUB}
     \UnaryInfC{\(x[a] \defeq x[b]\)}
     \DisplayProof,
     \AxiomC{\(a : A\)}
@@ -55,8 +56,8 @@
   \framesubtitle{Martin-L\"of 1983}
 
   \begin{description}
-  \item[Definitional equality]\leavevmode\\
-    Definition, Equivalence, Substituiting equals for equals, \textalpha.
+  \item[Definitional (syntactic, intentional) equality]\leavevmode\\
+    Definition, \textalpha-equivalence, SUB.
   \item[Judgemental equality \(A = B\), \(a = b : A\)]\leavevmode\\
     Defined for every type, \textbeta\texteta,
     \AxiomC{\([x : A]\)}
@@ -65,13 +66,13 @@
     \LeftLabel{\textxi}
     \UnaryInfC{\(\lambda x.\ f(x) = \lambda x.\ g(x) : \Pi(x : A)B(x)\)}
     \DisplayProof,
-    \AxiomC{\(a \in A\)}
+    \AxiomC{\(a : A\)}
     \AxiomC{\(A = B\)}
-    \BinaryInfC{\(a \in B\)}
+    \BinaryInfC{\(a : B\)}
     \DisplayProof,
-    \AxiomC{\(a = b \in A\)}
+    \AxiomC{\(a = b : A\)}
     \AxiomC{\(A = B\)}
-    \BinaryInfC{\(a = b \in B\)}
+    \BinaryInfC{\(a = b : B\)}
     \DisplayProof.
   \item[Propositional equality]\leavevmode\\
     \AxiomC{\(c : I(A, a, b)\)}
