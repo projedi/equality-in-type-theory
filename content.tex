@@ -1,4 +1,38 @@
 \frame {
+  \frametitle{Intentional Type Theory}
+  \framesubtitle{Per Martin-L\"of ``An Intuitionstic Theory of Types: Predicative Part'', 1975}
+  \begin{description}
+  \item[Definitional equality \(\defeq\)]\leavevmode\\
+    Reflexivity, Transitivity, Symmetry, \textalpha\textbeta,
+    \AxiomC{\(a \defeq b\)}
+    \UnaryInfC{\(x[a] \defeq x[b]\)}
+    \DisplayProof,
+    \AxiomC{\(a : A\)}
+    \AxiomC{\(A \defeq B\)}
+    \BinaryInfC{\(a : B\)}
+    \DisplayProof.
+  \item[Propositional equality (a.k.a.\ Identity) \(I(A, a, b)\)]
+    \[
+      r(a) : I(A, a, a)
+    \]
+    \begin{prooftree}
+    \AxiomC{\(x : A\)}
+    \AxiomC{\(y : A\)}
+    \AxiomC{\(z : I(A, x, y)\)}
+    \TrinaryInfC{\(C[x, y, z]\)}
+    \AxiomC{\(c[x] : C[x, x, r(x)]\)}
+    \BinaryInfC{\(f(x, x, r(x)) \defeq c[x]\)}
+    \end{prooftree}
+  \end{description}
+}
+
+
+
+
+
+
+
+\frame {
   \frametitle{Propositions as Types}
 
   \begin{tabular}{rcl}
