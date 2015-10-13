@@ -118,15 +118,18 @@
 
 \frame {
   \frametitle{Computational Type Theory}
-  \framesubtitle{}
 
-  Based on ETT.
-  Define the meaning of \(x = y : A\) for the types you want.
-  \(x : A\) is then a shortcut for \(x = x : A\). And propositional
-  equality is truly identified with judgemental equality.
+  Based on ETT. But ETT is formal type theory.
 
-  Set types: \(\{x : A | p(x)\}\)
-  Quotient types: \((x, y) : A // E\). Change an equivalence relation to \(E\).
+  \begin{description}
+  \item[Definitional equality]\leavevmode\\
+    Define the meaning of \(x = y : A\) for the types you want.
+    \(x : A\) is then a shortcut for \(x = x : A\).
+  \item[Propositional equality]\leavevmode\\
+    The same as judgemental.
+  \item[Quotient types]\leavevmode\\
+    \((x, y) : A /\!/ E\). Change an equivalence relation to \(E\).
+  \end{description}
 }
 
 \frame {
