@@ -93,148 +93,19 @@
   Result: propositional equality is truly extensional.
 }
 
-
-
-\frame {
-  \frametitle{Propositions as Types}
-
-  \begin{tabular}{rcl}
-  Proposition          & \(\leftrightarrow\) & Type \\
-  Proof                & \(\leftrightarrow\) & Term \\
-  Proof simplification & \(\leftrightarrow\) & Computation
-  \end{tabular}
-}
+% TODO: UTT Leibniz for Prop
 
 \frame {
-  \frametitle{Propositions as Types}
+  \frametitle{Computational Type Theory}
+  \framesubtitle{}
 
-  \begin{tabular}{rcl}
-    \(A\) & \(\leftrightarrow\) & \(A\) \\
-    \(A \land B\) & \(\leftrightarrow\) & \(A \times B\) \\
-    \(A \supset B\) & \(\leftrightarrow\) & \(A \to B\) \\
-    \(\forall x B(x)\) & \(\leftrightarrow\) & \(\Pi (x : A) B\) \\
-    \(x = y\) & \(\leftrightarrow\) & ???
-  \end{tabular}
-}
+  Based on ETT.
+  Define the meaning of \(x = y : A\) for the types you want.
+  \(x : A\) is then a shortcut for \(x = x : A\). And propositional
+  equality is truly identified with judgemental equality.
 
-\frame {
-  \frametitle{\(=\)}
-
-  Logic:
-  \begin{itemize}
-  \item Reflexivity
-    \AxiomC{\(x = x\)}
-    \DisplayProof
-  \item Congruence
-    \AxiomC{\(x = y\)}
-    \UnaryInfC{\(f(x) = f(y)\)}
-    \DisplayProof
-  \item Substiutivity
-    \AxiomC{\(x = y\)}
-    \AxiomC{\(A_x\)}
-    \BinaryInfC{\(A_y\)}
-    \DisplayProof
-  \end{itemize}
-
-  Type theory:
-  \begin{itemize}
-  \item
-    \AxiomC{\(\mathcal{I} x x\)}
-    \DisplayProof
-  \item
-    \AxiomC{\(\mathcal{I} x y\)}
-    \UnaryInfC{\(\mathcal{I} (f x) (f y)\)}
-    \DisplayProof
-  \item
-    \AxiomC{\(\mathcal{I} x y\)}
-    \AxiomC{\(A_x\)}
-    \BinaryInfC{\(A_y\)}
-    \DisplayProof
-  \end{itemize}
-}
-
-\frame {
-  \frametitle{Intentional Type Theory}
-  \framesubtitle{aka Martin-L\"of theory of types}
-  Definitional \(f \equiv g\).
-
-  \begin{itemize}
-    \item Intentional
-    \item Up to \textalpha
-    \item Substiutive
-  \end{itemize}
-  Checking that in
-  \AxiomC{\(A\)}
-  \AxiomC{\(B\)}
-  \BinaryInfC{\(A \& B\)}
-  \DisplayProof
-  \(A\), \(B\) on top are the same (i.e.\ definitionally equal) to the ones on the bottom.
-}
-
-\frame {
-  \frametitle{Intentional Type Theory}
-  \framesubtitle{aka Martin-L\"of theory of types}
-  Judgemental \(A = B,\quad a = b \in A\)
-
-  \begin{itemize}
-    \item Holds by definition for canonical elements
-    \item Up to \textbeta
-    \item Substiutive
-    \item
-      \AxiomC{\(a \in A\)}
-      \AxiomC{\(A = B\)}
-      \BinaryInfC{\(a \in B\)}
-      \DisplayProof
-    \item
-      \AxiomC{\(a = b \in A\)}
-      \AxiomC{\(A = B\)}
-      \BinaryInfC{\(a = b \in B\)}
-      \DisplayProof
-  \end{itemize}
-}
-
-\frame {
-  \frametitle{Intentional Type Theory}
-  \framesubtitle{aka Martin-L\"of theory of types}
-  Propositional \(I(a, b, A)\)
-
-  \begin{itemize}
-    \item A type
-    \item Canonical element \(r(a) : I(a, a, A)\)
-    \item Eliminator \(J : \).
-    \item
-      \AxiomC{\(a = b \in A\)}
-      \UnaryInfC{\(r(a) : I (a, b, A)\)}
-      \DisplayProof
-  \end{itemize}
-}
-
-\frame {
-  \frametitle{Extensional Type Theory}
-
-  \AxiomC{\(x \in I(a, b, A)\)}
-  \UnaryInfC{\(a = b \in A\)}
-  \DisplayProof
-}
-
-\frame {
-  \frametitle{CiC}
-}
-
-\frame {
-  \frametitle{UTT}
-}
-
-\frame {
-  \frametitle{HoTT}
-}
-
-\frame {
-  \frametitle{OTT}
-}
-
-\frame {
-  \frametitle{NuPRL}
+  Set types: \(\{x : A | p(x)}\)
+  Quotient types: \((x, y) : A // E\). Change an equivalence relation to \(E\).
 }
 
 \frame {
