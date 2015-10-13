@@ -90,25 +90,30 @@
 
 \frame {
   \frametitle{Observational Type Theory}
-  \framesubtitle{}
 
-  Definitional equality: \textalpha\textbeta\texteta.
-
-  Propositional equality is heterogeneous equality: \((x : A) = (y : B),\quad refl : (x : A) \to (x : A) = (x : A)\).
-  Coercion:
+  \begin{description}
+  \item[Definitional equality] \textalpha\textbeta\texteta.
+  \item[Propositional equality]
+  \begin{align*}
+    (x : A) = (y : B)\\
+    refl : (x : A) \to (x : A) = (x : A)
+  \end{align*}
+  \begin{prooftree}
   \AxiomC{\(p : S_0 = S_1\)}
   \AxiomC{\(s_0 : S_0\)}
+  \LeftLabel{Coercion}
   \BinaryInfC{\(s_0[p\rangle : S_1\)}
-  \DisplayProof
-  Coherence:
+  \end{prooftree}
+  \begin{prooftree}
   \AxiomC{\(p : S_0 = S_1\)}
   \AxiomC{\(s_0 : S_0\)}
-  \BinaryInfC{\(s_0[[p|\rangle : (s_0 : S_0) = (s_0[p\rangle : S_1)\)}
-  \DisplayProof
+  \LeftLabel{Coherence}
+  \BinaryInfC{\(s_0[\![p|\!\rangle : (s_0 : S_0) = (s_0[p\rangle : S_1)\)}
+  \end{prooftree}
+  \end{description}
 
-  Coercion, coherence rules are defined for each and every type.
-
-  Result: propositional equality is truly extensional.
+  Result: propositional equality is extensional, definitional equality
+  is decidable.
 }
 
 \frame {
