@@ -3,7 +3,7 @@
   \framesubtitle{Per Martin-L\"of ``An Intuitionstic Theory of Types: Predicative Part'', 1975}
   \begin{description}
   \item[Definitional equality \(\defeq\)]\leavevmode\\
-    Reflexivity, Transitivity, Symmetry, \textalpha\textbeta,
+    Definition, Equivalence, \textalpha\textbeta,
     \AxiomC{\(a \defeq b\)}
     \UnaryInfC{\(x[a] \defeq x[b]\)}
     \DisplayProof,
@@ -24,8 +24,49 @@
     \BinaryInfC{\(f(x, x, r(x)) \defeq c[x]\)}
     \end{prooftree}
   \end{description}
+  TODO: Also mention J as a modern alternative.
 }
 
+\frame {
+  \frametitle{Extentional Type Theory}
+  \framesubtitle{Per Martin-L\"of ``Intuitionstic Type Theory", 1980}
+
+  \begin{description}
+  \item[Definitional equality]\leavevmode\\
+    Definition, Equivalence, Substituiting equals for equals, \textalpha.
+    Checking that in
+    \AxiomC{\(A\)}
+    \AxiomC{\(B\)}
+    \BinaryInfC{\(A \& B\)}
+    \DisplayProof
+    \(A\), \(B\) on top are the same (i.e.\ definitionally equal) to the ones on the bottom.
+  \item[Judgemental equality \(A = B\), \(a = b : A\)]\leavevmode\\
+    Defined for every type, \textbeta\texteta,
+    \AxiomC{\([x : A]\)}
+    \noLine
+    \UnaryInfC{\(f(x) = g(x) : B(x)\)}
+    \LeftLabel{\textxi}
+    \UnaryInfC{\(\lambda x.\ f(x) = \lambda x.\ g(x) : \Pi(x : A)B(x)\)}
+    \DisplayProof,
+    \AxiomC{\(a \in A\)}
+    \AxiomC{\(A = B\)}
+    \BinaryInfC{\(a \in B\)}
+    \DisplayProof,
+    \AxiomC{\(a = b \in A\)}
+    \AxiomC{\(A = B\)}
+    \BinaryInfC{\(a = b \in B\)}
+    \DisplayProof.
+  \item[Propositional equality]\leavevmode\\
+    \AxiomC{\(c : I(A, a, b)\)}
+    \LeftLabel{ER}
+    \UnaryInfC{\(a = b : A\)}
+    \DisplayProof,
+    \AxiomC{\(c : I(A, a, b)\)}
+    \LeftLabel{UIP}
+    \UnaryInfC{\(c = r : I(A, a, b)\)}
+    \DisplayProof.
+  \end{description}
+}
 
 
 
