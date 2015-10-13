@@ -68,8 +68,30 @@
   \end{description}
 }
 
+% TODO: Setoids example in Coq.
 
+\frame {
+  \frametitle{Observational Type Theory}
+  \framesubtitle{}
 
+  Definitional equality: \textalpha\textbeta\texteta.
+
+  Propositional equality is heterogeneous equality: \((x : A) = (y : B),\quad refl : (x : A) \to (x : A) = (x : A)\).
+  Coercion:
+  \AxiomC{\(p : S_0 = S_1\)}
+  \AxiomC{\(s_0 : S_0\)}
+  \BinaryInfC{\(s_0[p\rangle : S_1\)}
+  \DisplayProof
+  Coherence:
+  \AxiomC{\(p : S_0 = S_1\)}
+  \AxiomC{\(s_0 : S_0\)}
+  \BinaryInfC{\(s_0[[p|\rangle : (s_0 : S_0) = (s_0[p\rangle : S_1)\)}
+  \DisplayProof
+
+  Coercion, coherence rules are defined for each and every type.
+
+  Result: propositional equality is truly extensional.
+}
 
 
 
