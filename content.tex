@@ -93,7 +93,12 @@
   Result: propositional equality is truly extensional.
 }
 
-% TODO: UTT Leibniz for Prop
+\frame {
+  \frametitle{Unified Type Theory}
+
+  ITT + impredicative Prop.
+  Equality is Leibniz: \(\forall P : A \to Prop.\ P(a) \implies P(b)\).
+}
 
 \frame {
   \frametitle{Computational Type Theory}
@@ -104,7 +109,7 @@
   \(x : A\) is then a shortcut for \(x = x : A\). And propositional
   equality is truly identified with judgemental equality.
 
-  Set types: \(\{x : A | p(x)}\)
+  Set types: \(\{x : A | p(x)\}\)
   Quotient types: \((x, y) : A // E\). Change an equivalence relation to \(E\).
 }
 
